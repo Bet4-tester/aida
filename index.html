@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDA - Apoyo para Exámenes</title>
+    <link rel="icon" type="image/x-icon" href="Robot AIDA.jpg" />  <!-- ICONO DE LA PESTAÑA DE LA WEB-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+             <a href="http://127.0.0.1:5500/index.html">
+                <img src="Robot AIDA.jpg" alt="Logo AIDA" style="border-radius: 50%; width: 300px; height: 300px;">
+            </a>
+            
+        </div>
+        <h1>AIDA</h1>
+        <p>Tu apoyo para dominar tus exámenes</p>
+    </header>
+    <main>
+        <section class="materias" id="materias">
+            <h2>Tus Materias</h2>
+            <div class="materia-card" id="matematicas">
+                <h3>Matemáticas</h3>
+                <p>Progreso: <span class="progress-text">0%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <button class="btn" onclick="redirigirPractica('matematicas')">Practicar</button>
+            </div>
+            <div class="materia-card" id="quimica">
+                <h3>Química</h3>
+                <p>Progreso: <span class="progress-text">0%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <button class="btn" onclick="redirigirPractica('quimica')">Practicar</button>
+            </div>
+            <div class="materia-card" id="historia">
+                <h3>Historia</h3>
+                <p>Progreso: <span class="progress-text">0%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <button class="btn" onclick="redirigirPractica('historia')">Practicar</button>
+            </div>
+        </section>
+        <section class="practica-materia" id="practica-materia" style="display: none;">
+            <h2 id="materia-practica-titulo"></h2>
+            <p>Progreso: <span id="progreso-texto"></span></p>
+            <div class="progress-bar">
+                <div id="progreso-barra" class="progress" style="width: 0%;"></div>
+            </div>
+            <div id="pregunta-texto"></div>
+            <div id="opciones"></div>
+            <p id="resultado" style="display: none;"></p>
+            <div id="botones-accion"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Estudia Fácil. Todos los derechos reservados por alumnos de la UTL.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

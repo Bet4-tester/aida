@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #146c81;
+    color: #333;
+}
+
+header {
+    background-color: #124150;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative; /* Para posicionar el logo */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+.logo-container {
+    position: absolute;
+    top: -60%; /* Ajusta la distancia desde la parte superior */
+    left: -890px; /* Ajusta la distancia desde la izquierda */
+    width: 100%; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción original */
+    transform: scale(0.4);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.materias h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.materia-card {
+    background-color: #1aa2bb;
+    border-radius: 200px;    /* Forma de los apartados en materias */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Centra todo el contenido de la tarjeta */
+    min-height: 100px; /* Establece una altura mínima uniforme */
+}
+
+.materia-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center; /* Centra específicamente los títulos */
+}
+
+.materia-card p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    text-align: center; /* Centra el texto del progreso */
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra la barra visualmente */
+}
+
+.progress {
+    background-color: #4a90e2;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #357abd;
+}
+
+.practica-materia {
+    background-color: #1aa2bb;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.practica-materia h2 {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+}
+
+#pregunta-texto {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.opcion {
+    display: block;
+    background-color: #f4f4f9;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #333;
+}
+
+.opcion:hover {
+    background-color: #e0e0e0;
+}
+
+.opcion.correcto {
+    background-color: #28a745;
+    color: white;
+}
+
+.opcion.incorrecto {
+    background-color: #dc3545;
+    color: white;
+}
+
+#resultado {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+#botones-accion {
+    margin-top: 1rem;
+}
+
+          /* Iniciar Sesion */
+.login-container {
+    background-color: #1aa2bb;
+    border-radius: 100px;
+    box-shadow: 0 20px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación de aparición */
+}
+
+.login-container h2 {
+    margin: 0 0 1.5rem;
+    font-size: 1.8rem;
+}
+/* correo, contraseña */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 400px;
+    left: -12.5px;    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Barras blancas de datos */
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-size: 1rem;
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.form-group input:focus {
+    border-color: #4a90e2; /* Cambio de color al enfocar */
+    outline: none; /* Quitar el outline predeterminado */
+}
+
+
+.login-container p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-container a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Sube un poco desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ /* Fin Iniciar Sesion */
+
+footer {
+    background-color: #124150;
+    color: white;
+    text-align: center;
+    padding: 0rem; /* Ajustado de 0.1rem a 1rem para mejor legibilidad */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .materias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
+    }
+
+    .materia-card {
+        margin-bottom: 0; /* Elimina el margen inferior en la cuadrícula */
+    }
+}
